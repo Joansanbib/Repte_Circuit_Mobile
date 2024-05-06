@@ -2,7 +2,8 @@ package domain.entities
 
 import java.time.LocalDate
 
-data class usuari_resols(
+class usuari_resols : ArrayList<usuari_resol>()
+data class usuari_resol(
     val id : Int,
     val Incidencia : Int,
     val Usuari : Int,

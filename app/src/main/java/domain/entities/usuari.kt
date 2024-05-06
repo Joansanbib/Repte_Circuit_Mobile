@@ -3,7 +3,8 @@ package domain.entities
 import java.sql.Timestamp
 import java.time.LocalDate
 
-data class usuaris(
+class usuaris : ArrayList<usuari>()
+data class usuari(
     val id : Int,
     val NIF : String,
     val Nom : String,

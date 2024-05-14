@@ -1,8 +1,9 @@
 package data.implementation
 
 import domain.repo.IncidenciaRepo
+import javax.inject.Inject
 
-class IncidenciaRepoImpl constructor() : IncidenciaRepo {
+class IncidenciaRepoImpl @Inject constructor() : IncidenciaRepo {
 
 
 }

@@ -3,8 +3,9 @@ package data.implementation
 import domain.entities.usuari_resol
 import domain.entities.usuari_resols
 import domain.repo.Usuari_resolRepo
+import javax.inject.Inject
 
-class Usuari_resolRepoImpl constructor() : Usuari_resolRepo {
+class Usuari_resolRepoImpl @Inject constructor() : Usuari_resolRepo {
     override fun getResolComentari(coentari: String): usuari_resols {
         TODO("Not yet implemented")
     }

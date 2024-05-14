@@ -48,5 +48,13 @@ class Login() : Fragment() {
             }
 
         }
+        binding.entrar.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction().apply {
+                val dashboard = Dashboard()
+                replace(R.id.fragmentContainerView, dashboard)
+                addToBackStack(null)
+                commit()
+            }
+        }
     }
 }

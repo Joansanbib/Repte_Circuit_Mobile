@@ -142,7 +142,7 @@
         app:layout_constraintGuide_percent="0.91" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/entrar"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/no_border_radius"

@@ -40,6 +40,14 @@ class Register() : Fragment() {
             }
 
         }
+        binding.entrar.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction().apply {
+                val dashboard = Dashboard()
+                replace(R.id.fragmentContainerView, dashboard)
+                addToBackStack(null)
+                commit()
+            }
+        }
         val backgroundVideo = binding.backgroundVideo as VideoView
         val videoPath = "android.resource://" + requireContext().packageName + "/" + R.raw.background_video
         val videoUri = Uri.parse(videoPath)

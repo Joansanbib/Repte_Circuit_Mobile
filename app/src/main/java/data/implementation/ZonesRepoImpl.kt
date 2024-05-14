@@ -1,7 +1,8 @@
 package data.implementation
 
 import domain.repo.ZonesRepo
+import javax.inject.Inject
 
-class ZonesRepoImpl constructor() : ZonesRepo {
+class ZonesRepoImpl @Inject constructor() : ZonesRepo {
 
 }

@@ -5,52 +5,58 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.reptecircuit.R
 import ui.viewmodels.SearchResultsViewModel
-import javax.inject.Inject
 
+class SearchResultsAdapter(
+    private val viewModel: SearchResultsViewModel,
+    private var onItemClicked: ((text: String) -> Unit)
+) : RecyclerView.Adapter<SearchResultsAdapter.ViewHolder>(), SearchResultsInterface {
 
-class SearchResultsAdapter (private val viewModel: SearchResultsViewModel) : RecyclerView.Adapter<SearchResultsAdapter.ViewHolder>(),
-    SearchResultsInterface {
-
-    private var original_results : List<String> = listOf()
+    private var original_results: List<String> = listOf()
     private var results: List<String> = listOf()
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(itemView: View, val onItemClicked: (text: String) -> Unit) : RecyclerView.ViewHolder(itemView) {
         val textViewResult: TextView = itemView.findViewById(android.R.id.text1)
+
+        fun bind(text: String) {
+            textViewResult.text = text
+            itemView.setOnClickListener {
+                onItemClicked(text)
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(android.R.layout.simple_list_item_1, parent, false)
-        return ViewHolder(view)
+        val layoutInflater = LayoutInflater.from(parent.context)
+        val view = layoutInflater.inflate(android.R.layout.simple_list_item_1, parent, false)
+        return ViewHolder(view, onItemClicked)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.textViewResult.text = results[position]
+        holder.bind(results[position]) // Llamada a bind para configurar el texto y el onClick
     }
 
     override fun getItemCount(): Int {
         return results.size
     }
 
-     fun setOriginalResults(results : List<String>) {
+    fun setOriginalResults(results: List<String>) {
         original_results = results
+        updateResults(results)
     }
 
-     fun updateResults(newResults : List<String>) {
+    fun updateResults(newResults: List<String>) {
         results = newResults
         notifyDataSetChanged()
     }
 
-     fun search(text : String) {
-        val filteredList = results.filter { it.contains(text, ignoreCase = true) }.toList()
-        val filteredListOriginals = original_results.filter {  it.contains(text, ignoreCase = true) }.toList()
-        if(filteredList.size>filteredListOriginals.size) updateResults(filteredList)
-        else {
-            updateResults(filteredListOriginals)
-        }
+    fun search(text: String) {
+        val filteredList = original_results.filter { it.contains(text, ignoreCase = true) }
+        updateResults(filteredList)
     }
 
     override fun onItemClick() {
-        TODO("Not yet implemented")
+        // Implementar si es necesario
     }
 }

@@ -191,7 +191,7 @@
         android:textColor="#B90606"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/entrar"
         app:layout_constraintEnd_toEndOf="@+id/registrarse"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toTopOf="@+id/guideline6" />

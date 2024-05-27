@@ -6,7 +6,7 @@ import domain.repo.Usuari_resolRepo
 import javax.inject.Inject
 
 class Usuari_resolRepoImpl @Inject constructor() : Usuari_resolRepo {
-    override fun getResolComentari(coentari: String): usuari_resols {
+    override fun getResolComentari(comentari: String): usuari_resols {
         TODO("Not yet implemented")
     }
 

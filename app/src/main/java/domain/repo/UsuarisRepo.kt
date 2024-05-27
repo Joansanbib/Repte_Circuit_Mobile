@@ -2,11 +2,9 @@ package domain.repo
 
 import domain.entities.usuari
 import domain.entities.usuaris
+import retrofit2.Response
 
 interface UsuarisRepo {
 
-    fun getUsuari(id : Int) : usuari
-    fun getUsuariCognoms (cognoms : String) : usuaris
-    fun getUsuariNif (nif : String) : usuari
-    fun getUsuarisXrol (rol : String) : usuaris
+    suspend fun loginUsuari(email : String, password : String) : usuari?
 }

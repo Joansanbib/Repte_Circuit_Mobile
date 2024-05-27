@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="40dp"
+    app:cardCornerRadius="20dp"
+    app:cardBackgroundColor="#221F1F"
+    tools:context="ui.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/zonaTV"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="ZONA"
+            android:padding="10dp"
+            android:textColor="#E5E5E5"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline36"
+            app:layout_constraintEnd_toStartOf="@+id/guideline37"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline38" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.89" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline37"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <TextView
+            android:id="@+id/nomTV"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="NOM"
+            android:padding="10dp"
+            android:textColor="#E5E5E5"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/guideline31"
+            app:layout_constraintEnd_toStartOf="@+id/guideline37"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/descripcioTV"
+            android:layout_width="0dp"
+            android:textStyle="bold"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="DESCRIPCIÓ"
+            android:padding="10dp"
+            android:textColor="#E5E5E5"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline32"
+            app:layout_constraintEnd_toStartOf="@+id/guideline37"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nomTV" />
+
+        <TextView
+            android:id="@+id/dataTV"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="DATA"
+            android:padding="10dp"
+            android:textColor="#E5E5E5"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline33"
+            app:layout_constraintEnd_toStartOf="@+id/guideline37"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descripcioTV" />
+
+        <TextView
+            android:id="@+id/estatTV"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="ESTAT"
+            android:padding="10dp"
+            android:textColor="#E5E5E5"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline34"
+            app:layout_constraintEnd_toStartOf="@+id/guideline37"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline33" />
+
+        <TextView
+            android:id="@+id/prioritatTV"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="PRIORITAT"
+            android:padding="10dp"
+            android:textColor="#E5E5E5"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline35"
+            app:layout_constraintEnd_toStartOf="@+id/guideline37"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline34" />
+
+        <TextView
+            android:id="@+id/rolTV"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="ROL ASSIGNAT"
+            android:textColor="#E5E5E5"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline38"
+            app:layout_constraintEnd_toStartOf="@+id/guideline37"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline35" />
+
+        <TextView
+            android:id="@+id/nomInput"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#E5E5E5"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline31"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline37"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/descripcioInput"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#E5E5E5"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline32"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline37"
+            app:layout_constraintTop_toTopOf="@+id/guideline31" />
+
+        <TextView
+            android:id="@+id/dataInput"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#E5E5E5"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline33"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline37"
+            app:layout_constraintTop_toTopOf="@+id/guideline32" />
+
+        <TextView
+            android:id="@+id/estatInput"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#E5E5E5"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline34"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="@+id/guideline37"
+            app:layout_constraintTop_toTopOf="@+id/guideline33"
+            app:layout_constraintVertical_bias="0.472" />
+
+        <TextView
+            android:id="@+id/prioritatInput"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#E5E5E5"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline35"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="@+id/guideline37"
+            app:layout_constraintTop_toTopOf="@+id/guideline34" />
+
+        <TextView
+            android:id="@+id/rolInput"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#E5E5E5"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline38"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline37"
+            app:layout_constraintTop_toTopOf="@+id/guideline35" />
+
+        <TextView
+            android:id="@+id/zonaInput"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#E5E5E5"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline36"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/zonaTV"
+            app:layout_constraintTop_toTopOf="@+id/guideline38" />
+
+        <ImageView
+            android:id="@+id/imatge"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toTopOf="@+id/guideline30"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline36"
+            android:src="@drawable/logo" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline38"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.6" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

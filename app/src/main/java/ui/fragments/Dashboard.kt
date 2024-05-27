@@ -33,6 +33,14 @@ class Dashboard : Fragment() {
                 commit()
             }
         }
+        binding.zones.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction().apply {
+                val zones = Zones()
+                replace(R.id.fragmentContainerView, zones)
+                addToBackStack(null)
+                commit()
+            }
+        }
 
     }
 }
